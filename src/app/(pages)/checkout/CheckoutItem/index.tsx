@@ -1,3 +1,5 @@
+"use client"
+
 import Link from 'next/link'
 
 import { Media } from '../../../_components/Media'
