@@ -1,5 +1,3 @@
-'use client'
-
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 
@@ -16,7 +14,7 @@ export const getMeUser = async (args?: {
   const cookieStore = cookies()
   const token = cookieStore.get('payload-token')?.value
 
-  const meUserReq = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/users/me`, {
+  const meUserReq = await fetch(`/api/users/me`, {
     headers: {
       Authorization: `JWT ${token}`,
     },
